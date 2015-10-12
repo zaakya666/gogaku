@@ -1,0 +1,52 @@
+client_id=
+838691455697-29ntr73t56ffiueoup3hh22tr1ue5j71.apps.googleusercontent.com
+
+client_secret=
+_zoUBJ7SpT4XSy7nMSHfj3sc
+
+https://accounts.google.com/o/oauth2/auth?client_id=838691455697-29ntr73t56ffiueoup3hh22tr1ue5j71.apps.googleusercontent.com&redirect_uri=http://localhost&scope=https://www.googleapis.com/auth/drive&response_type=code
+
+
+4/LwZ-HWwF1wjgtLI3lrklDxDNUnjj8F5FscKA5Ovg8Hc
+4/9gQlCEmPxkd_jQQYVDCQH8f8Znjm-PgeTz0HjvR2S2Y
+4/R-VGEfypryPMNiP0R5hzz-BifdW9xNHzJPh_9dv9xrE
+
+curl -d client_id=838691455697-29ntr73t56ffiueoup3hh22tr1ue5j71.apps.googleusercontent.com -d client_secret=_zoUBJ7SpT4XSy7nMSHfj3sc -d redirect_uri=http://localhost -d grant_type=authorization_code -d code=4/R-VGEfypryPMNiP0R5hzz-BifdW9xNHzJPh_9dv9xrE https://accounts.google.com/o/oauth2/token
+
+curl -d client_id=838691455697-29ntr73t56ffiueoup3hh22tr1ue5j71.apps.googleusercontent.com -d 
+client_secret=_zoUBJ7SpT4XSy7nMSHfj3sc -d 
+redirect_uri=http://localhost -d grant_type=authorization_code -d 
+code=4/R-VGEfypryPMNiP0R5hzz-BifdW9xNHzJPh_9dv9xrE https://accounts.google.com/o/oauth2/token
+
+
+curl -d client_id=838691455697-29ntr73t56ffiueoup3hh22tr1ue5j71.apps.googleusercontent.com -d client_secret=_zoUBJ7SpT4XSy7nMSHfj3sc -d refresh_token=ya29.8wGsyFrlscVtoTrBEJBGX4KRZUZMIFsS3Eki81MbjB6gSL5aDcELFFxmtn7S6H473IvO -d grant_type=refresh_token https://accounts.google.com/o/oauth2/token
+
+
+{
+  "access_token" : "ya29.8wEB-0btSwWpOFWiNI_ZF-aslhvtOvx3KuaAQM-usjRzS5hIXJeXPMPgWtl0iQkOxPxS",
+  "token_type" : "Bearer",
+  "expires_in" : 3600
+}
+{
+  "access_token" : "ya29.8wFHS8ueK2Od7YdMRVU978eCwBJO76hgI2pwsVqbqk5kZgpTCuj2GnJcm3dzpuWA9FeB",
+  "token_type" : "Bearer",
+  "expires_in" : 3529
+}
+{
+  "access_token" : "ya29.8wGsyFrlscVtoTrBEJBGX4KRZUZMIFsS3Eki81MbjB6gSL5aDcELFFxmtn7S6H473IvO",
+  "token_type" : "Bearer",
+  "expires_in" : 3557
+}
+
+
+参考：
+http://qiita.com/cigalecigales/items/470e81c78cf3ef350b0c
+http://developersnote.jp/knowhow/google-drive-ruby-tips.html
+
+
+your access_token is:
+ya29.8wFxB-1JQy3lRpIDfIvfdCFJAGA2JoddUIsoRrHg-NW9Jbk-GUSCoVqN5MRoXcto6Flt
+----
+your refresh_token is:
+1/EzSKnlgQMmAVJ3v3Bv_7WO3kzaH718ZWldDCW8w8W9RIgOrJDtdun6zK6XiATCKT
+----
