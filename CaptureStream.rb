@@ -11,6 +11,12 @@ require 'fileutils'
 require 'yaml'
 #puts `gem install google_drive` # use google drive
 YMLfilename="kouza.yml"
+
+t=Time.now
+if t.wday != 1 #月曜日のみ実行...(kouza.ymlに書き込めないため...)
+	exit()
+end
+
 =begin
 
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝【注意事項】＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
@@ -136,7 +142,7 @@ $default_target（配列）に指定しておくことで引数指定なしで�
 
 $default_target = []
 $english = %w!basic1 basic2 basic3 timetrial kaiwa business1 business2 kouryaku yomu enjoy!
-$default_target = %w!basic3 timetrial kaiwa business1 business2 kouryaku yomu enjoy!
+$default_target = %w!timetrial kaiwa business1 business2 kouryaku yomu enjoy!
 $multilingual = %w!chinese levelup_chinese french italian hangeul levelup_hangeul german spanish russian!
 
 #--------------------------------------------------------------------------------
