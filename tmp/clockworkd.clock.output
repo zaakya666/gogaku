@@ -86,3 +86,19 @@ business2: ---
 kouryaku: --
 yomu: -
 enjoy: -----
+I, [2015-11-26T00:19:25.969864 #1369]  INFO -- : Starting clock for 1 events: [ CaptureStream.job ]
+I, [2015-11-26T00:20:17.817069 #1397]  INFO -- : Starting clock for 1 events: [ CaptureStream.job ]
+I, [2015-11-26T10:30:00.004841 #1397]  INFO -- : Triggering 'CaptureStream.job'
+I, [2015-11-27T10:30:00.003584 #1397]  INFO -- : Triggering 'CaptureStream.job'
+I, [2016-06-19T20:50:37.916195 #996]  INFO -- : Starting clock for 1 events: [ CaptureStream.job ]
+I, [2016-06-19T20:54:19.673924 #1304]  INFO -- : Starting clock for 1 events: [ CaptureStream.job ]
+I, [2016-07-20T09:59:29.862842 #1337]  INFO -- : Starting clock for 1 events: [ CaptureStream.job ]
+I, [2016-07-20T10:30:00.001377 #1337]  INFO -- : Triggering 'CaptureStream.job'
+語学講座ダウンローダ (2014/04/07)
+timetrial: -----
+kaiwa: -----
+business1: --
+business2: ---
+kouryaku: --
+yomu: -
+enjoy: -----

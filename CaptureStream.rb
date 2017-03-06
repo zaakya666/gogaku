@@ -14,7 +14,7 @@ YMLfilename="kouza.yml"
 
 t=Time.now
 if t.wday != 1 #月曜日のみ実行...(kouza.ymlに書き込めないため...)
-	exit()
+	#exit()
 end
 
 =begin
