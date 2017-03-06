@@ -9,13 +9,13 @@ require 'date'
 require 'tempfile'
 require 'fileutils'
 require 'yaml'
-#puts `gem install google_drive` # use google drive
+require 'google_drive'
 YMLfilename="kouza.yml"
 
-t=Time.now
-if t.wday != 1 #月曜日のみ実行...(kouza.ymlに書き込めないため...)
-	#exit()
-end
+# t=Time.now
+# if t.wday != 1 #月曜日のみ実行...(kouza.ymlに書き込めないため...)
+# 	#exit()
+# end
 
 =begin
 
@@ -142,7 +142,8 @@ $default_target（配列）に指定しておくことで引数指定なしで�
 
 $default_target = []
 $english = %w!basic1 basic2 basic3 timetrial kaiwa business1 business2 kouryaku yomu enjoy!
-$default_target = %w!timetrial kaiwa business1 business2 kouryaku yomu enjoy!
+$default_target = $english
+# $default_target = %w!timetrial kaiwa business1 business2 kouryaku yomu enjoy!
 $multilingual = %w!chinese levelup_chinese french italian hangeul levelup_hangeul german spanish russian!
 
 #--------------------------------------------------------------------------------
@@ -400,8 +401,9 @@ def capture_stream( target, kouza, hdate, file )
 			print( 'O' )
 			
 #use google drive　追記
-			session=use_google_drive()
+			session = GoogleDrive::Session.from_config("config.json")
 			session.upload_from_file( out_file, out_file, :convert => false)
+			
 			print('.')
 			kouza << out_file
 			open(YMLfilename,"w"){|e|YAML.dump(kouza, e)}
@@ -418,31 +420,6 @@ def capture_stream( target, kouza, hdate, file )
 	
 	return result
 end
-#--------------------------------------------------------------------------------
-# グーグルドライブ
-#--------------------------------------------------------------------------------
-def use_google_drive()
-	require 'google_drive'
-	require 'google/api_client'
-	
-client_id = "417942958930-m6qcfqumabrl0v0kh4ilv0p0fjn53o2l.apps.googleusercontent.com"
-client_secret = "IvMkjEg31ay_uZfYX0wtBBox"
-refresh_token = "1/EzSKnlgQMmAVJ3v3Bv_7WO3kzaH718ZWldDCW8w8W9RIgOrJDtdun6zK6XiATCKT"
-	client = OAuth2::Client.new(
-	    client_id, client_secret,
-	    :site => "https://accounts.google.com",
-	    :token_url => "/o/oauth2/token",
-	    :authorize_url => "/o/oauth2/auth"
-	)
-	
-	auth_token = OAuth2::AccessToken.from_hash(client, { :refresh_token => refresh_token, :expires_at => 3600 })
-	auth_token = auth_token.refresh!
-	
-	session = GoogleDrive.login_with_oauth(auth_token.token)
-	return session
-end
-
-
 
 
 #--------------------------------------------------------------------------------
